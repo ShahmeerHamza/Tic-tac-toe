@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&family=Roboto:ital,wght@0,100;1,300&family=Zen+Kurenaido&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100wh;
+    height: 100vh;
+}
+nav{
+    background: black;
+    color: white;
+    height: 75px;
+    font-size: 3vw;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 0 65px;
+    justify-content: center;
+}
+nav ul{
+    list-style-type: none;
+}
+.container{
+    /* background: cornflowerblue; */
+    display: flex;
+    justify-content: center;
+    /* align-content: center;
+    justify-items: center; */
+    align-items: center;
+    padding: 0;
+}
+#gamecontainer{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-rows: repeat(3, 15vw);
+    grid-template-columns: repeat(3, 15vw);
+    font-family: 'Roboto', sans-serif;
+    padding: 50px;
+}
+.box{
+    border: 1px solid black;
+    font-size: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* display: none; */
+}
+
+.box:hover{
+    background: rgb(232, 243, 214);
+}
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(3){
+    border-top: none;
+}
+.box:nth-child(3n+1){
+    border-left: none;
+}
+.box:nth-child(3n+0){
+    border-right: none;
+}
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9){
+    border-bottom: none;
+}
+.img{
+    display: none;
+}
+.showimage{
+    display: block;
+}
+/* img{
+    width: 0vw;
+} */
+.gameinfo{
+    font-family: 'Fruktur', sans-serif;
+    font-size: 4vw;
+    display: grid;
+    justify-content: center;
+    justify-items: center; 
+    align-content: center;
+    align-items: center;
+}
+.info{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+#reset{
+font-family: 'Fruktur', sans-serif;
+border-radius: 5px;
+background: rgb(175, 175, 251);
+padding: 1% 15%;
+font-size: 3vw;
+
+}
+@media screen and (max-width: 768px) 
+{
+    .container{
+        flex-wrap: wrap;
+        }
+};
+@media only screen and (min-width: 1440px)
+{
+    .container{
+        padding: 0;
+    }
+    /* .box{
+        width: 10vw;
+        height: 10vw;
+    } */
+}
